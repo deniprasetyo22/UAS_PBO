@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="138f59d5-c582-4c3a-9fa7-1bf32ef9a327">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="id" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT * FROM tiket_bus INNER JOIN users ON users.id_user=tiket_bus.id_user WHERE tiket_bus.id_user=$P{id}]]>
+	</queryString>
+	<field name="id_bus" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_user" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama_bus" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tgl_berangkat" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jam" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="terminal_asal" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="terminal_tujuan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="harga" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="email" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="password" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nohp" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jk" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="7b926380-ed5a-4437-8ba0-2cd674a86d93" x="25" y="33" width="91" height="29"/>
+				<textElement>
+					<font fontName="Segoe UI" size="20"/>
+				</textElement>
+				<text><![CDATA[Tiket Bus]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="b3f53a17-749f-47df-b70e-6835c3bb3b7c" x="116" y="33" width="149" height="29"/>
+				<textElement>
+					<font fontName="Segoe UI" size="20"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nama_bus}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<textField>
+				<reportElement uuid="bc2f9d7b-86a2-4531-8752-a0fbae0d17cc" x="151" y="16" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{id_bus}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="9e4e61fc-c6a8-4911-b684-79d340b5d04f" x="0" y="16" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Kode Tiket]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement uuid="1545142d-c60c-434d-a917-94075710014f" x="151" y="2" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="f3ce6caa-1005-4c80-9413-e1020548afb7" x="0" y="2" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Nama Penumpang]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="1097a74d-057b-49b0-a578-b339c9ac488f" x="151" y="36" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{nama_bus}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="be8880c4-d617-4ff5-bfe8-83b01cc6c91d" x="0" y="36" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Nama Bus]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="15dc6f58-6426-4327-a092-999938296650" x="151" y="68" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{terminal_asal}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="5fa7d59f-03fd-4986-8fd5-ed085f38b728" x="0" y="68" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Terminal Asal]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="af695ccf-f00d-4a1d-8fee-98c653c409f8" x="151" y="105" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{terminal_tujuan}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="bcece420-e9c3-4444-955f-9efa1b662346" x="0" y="105" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Terminal Tujuan]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="c45e66d2-d508-43c0-81ac-15aa0389f205" x="437" y="2" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{tgl_berangkat}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="1fec7737-c956-4721-a876-8ee6b3ba8791" x="302" y="2" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Tanggal Berangkat]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="4e2852d1-4819-437c-b005-df38920388c1" x="437" y="36" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{jam}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="0f81b415-0ee3-4e25-a751-36d9e18d0be7" x="302" y="36" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Jam Keberangkatan]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="3dc38879-36fd-4473-abdc-a59439836a44" x="437" y="68" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{harga}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="dfc433b0-8995-46a7-b577-36c9ddf78891" x="302" y="68" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Harga]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<textField pattern="dd/MM/yyyy">
+				<reportElement uuid="cefc76e7-2959-46ac-bf57-55f521925453" x="455" y="25" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
